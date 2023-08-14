@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%
@@ -181,60 +181,6 @@ template {
 
 /*# sourceMappingURL=normalize.min.css.map */
 
-html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-}
-
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
-
-body {
-    color: var(--text-color);
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-base);
-}
-
-a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.visually-hidden {
-    display: none;
-}
-
-.card-category {
-    color: #D73953;
-}
-
-.section-header {
-    text-align: var(--section-header-align);
-    padding: var(--section-header-padding);
-}
-
-.section-body {
-    padding: var(--section-body-padding);
-}
-
-.section-footer {
-    padding: var(--section-footer-padding);
-    text-align: var(--section-footer-align);
-}
-
-.section {
-    padding: var(--section-padding);
-}
-
-.section-tagline {
-    color: #D73953;
-}
-
 :root {
     --color-primary: #d73953;
     --color-black: #090909;
@@ -261,6 +207,9 @@ a {
     --section-padding: 5rem 0;
     --section-header-padding: 0 0 3rem;
     --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
@@ -268,23 +217,48 @@ a {
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 3rem 0;
     --nav-item-link-hover: var(--color-primary);
-    --section-footer-padding: 3rem 0 0;
-    --section-footer-align: center;
-    --footer-padding: 5rem 0 1rem;
     --section-tagline-margin: 0;
+
 }
 
-[data-section-theme="dark"] {
-    --text-color: var(--color-white);
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-[data-section-theme="dark"] .section-title {
-    --section-title-color: var(--color-white);
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
-[data-section-theme="dark"] {
-    --section-title-color: var(--color-white);
-    background: var(--color-black);
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+}
+
+body,
+a {
+    color: var(--text-color);
+}
+
+a:link {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+a:visited {
+    font-style: italic;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    background-color: var(--color-light-grey);
 }
 
 h1,
@@ -297,8 +271,30 @@ h6 {
     font-weight: var(--font-weight-bold);
 }
 
+.visually-hidden {
+    display: none;
+}
+
+.card-category {
+    color: var(--color-primary);
+}
+
 .section-header {
     text-align: var(--section-header-align);
+    padding: var(--section-header-padding);
+}
+
+.section-body {
+    padding: var(--section-body-padding);
+}
+
+.section-footer {
+    padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
+}
+
+.section {
+    padding: var(--section-padding);
 }
 
 .section-title {
@@ -315,6 +311,12 @@ h6 {
     text-transform: var(--section-tagline-transform);
     font-weight: var(--font-weight-bold);
     margin: var(--section-tagline-margin);
+}
+
+.container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .navbar-menu {
@@ -346,23 +348,6 @@ h6 {
     color: var(--nav-item-link-hover);
 }
 
-a:link {
-    color: var(--color-black);
-    text-decoration: none;
-}
-
-a:visited {
-    font-style: italic;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:active {
-    background-color: var(--color-light-grey);
-}
-
 ul.row {
     margin: 0;
     padding: 0;
@@ -370,7 +355,7 @@ ul.row {
 }
 
 .row::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
 }
@@ -388,10 +373,10 @@ ul.row {
     padding: 0.5rem;
 }
 
-.container {
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
+[data-section-theme="dark"] {
+    --text-color: var(--color-white);
+    --section-title-color: var(--color-white);
+    background-color: var(--color-black);
 }
 
 .footer {
@@ -412,8 +397,7 @@ ul.row {
     color: var(--text-color);
 }
 
-.social-link,
-.social-link svg {
+.social-link {
     display: block;
 }
 
